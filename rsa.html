@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA</title>
+    <link rel="stylesheet" href="rsa.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.10.0/forge.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cifrado y Descifrado RSA</h1>
+
+        <div class="section">
+            <h2>Generar Claves RSA</h2>
+            <button id="btnGenerarClave">Generar Clave de 2048 bits</button>
+
+            <div class="result">
+                <label for="clavePublica">Clave Pública:</label>
+                <textarea id="clavePublica" readonly></textarea>
+
+                <label for="clavePrivada">Clave Privada:</label>
+                <textarea id="clavePrivada" readonly></textarea>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Encriptación RSA</h2>
+            <label for="mensajeAEncriptar">Mensaje a Encriptar:</label>
+            <textarea id="mensajeAEncriptar" required></textarea>
+
+            <label for="clavePublicaEncriptar">Clave Pública:</label>
+            <textarea id="clavePublicaEncriptar" readonly></textarea>
+
+            <div class="result">
+                <label for="mensajeEncriptado">Mensaje Encriptado:</label>
+                <textarea id="mensajeEncriptado" readonly></textarea>
+            </div>
+
+            <button id="btnEncriptar">Encriptar</button>
+        </div>
+
+        <div class="section">
+            <h2>Desencriptación RSA</h2>
+            <label for="mensajeADesencriptar">Mensaje a Desencriptar:</label>
+            <textarea id="mensajeADesencriptar" required></textarea>
+
+            <label for="clavePrivadaDesencriptar">Clave Privada:</label>
+            <textarea id="clavePrivadaDesencriptar" readonly></textarea>
+
+            <div class="result">
+                <label for="mensajeDesencriptado">Mensaje Desencriptado:</label>
+                <textarea id="mensajeDesencriptado" readonly></textarea>
+            </div>
+
+            <button id="btnDesencriptar">Desencriptar</button>
+        </div>
+    </div>
+    <script src="rsa.js"></script>
+</body>
+</html>

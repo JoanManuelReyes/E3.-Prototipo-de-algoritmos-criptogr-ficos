@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES</title>
+    <link rel="stylesheet" href="aes.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Cifrado y Descifrado AES</h1>
+        
+        <div class="section">
+            <h2>Cifrar Mensaje</h2>
+            <label for="claveCifrado">Clave (máx. 32 caracteres):</label>
+            <input type="text" id="claveCifrado" maxlength="32" required>
+
+            <label for="mensajeCifrado">Mensaje:</label>
+            <textarea id="mensajeCifrado" required></textarea>
+
+            <div class="result">
+                <label for="mensajeCifradoResultado">Mensaje Cifrado:</label>
+                <textarea id="mensajeCifradoResultado" readonly></textarea>
+            </div>
+
+            <button id="btnCifrar">Cifrar</button>
+        </div>
+
+        <div class="section">
+            <h2>Descifrar Mensaje</h2>
+            <label for="claveDescifrado">Clave (máx. 32 caracteres):</label>
+            <input type="text" id="claveDescifrado" maxlength="32" required>
+
+            <label for="mensajeDescifrado">Mensaje Cifrado:</label>
+            <textarea id="mensajeDescifrado" required></textarea>
+
+            <div class="result">
+                <label for="mensajeDescifradoResultado">Mensaje Descifrado:</label>
+                <textarea id="mensajeDescifradoResultado" readonly></textarea>
+            </div>
+
+            <button id="btnDescifrar">Descifrar</button>
+        </div>
+    </div>
+    <script src="aes.js"></script>
+</body>
+</html>
